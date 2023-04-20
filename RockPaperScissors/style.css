@@ -1,0 +1,189 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 100vh;
+    background-color: #308cef;
+    font-family: 'Quicksand', sans-serif;
+}
+
+/*** ROCK, PAPER, AND SCISSORS OPTIONS ***/
+
+#options {
+    display: flex;
+    margin-bottom: 5em;
+}
+
+.option {
+    background-color: white;
+    margin: 0 1em;
+    padding: 1em;
+    color: rgb(4,28,54);
+    border: 3px solid #041c36;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+.option p {
+    font-size: 1.2em;
+    font-weight: bold;
+    text-align: center;
+}
+
+#user, #cpu {
+    color: white;
+    border: 3px solid white;
+    padding: 1.25em;
+    font-size: 1.75em;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+
+#user {
+    position: absolute;
+    left: -3px;
+    top: -3px;
+    background: rgb(4,28,54);
+    background: linear-gradient(120deg, rgba(4,28,54,1) 24%, rgba(4,61,122,1) 100%);
+    border-bottom-right-radius: 8px;
+}
+
+#cpu {
+    position: absolute;
+    right: -3px;
+    top: -3px;
+    background: rgb(4,28,54);
+    background: linear-gradient(120deg, rgba(4,61,122,1) 24%, rgba(4,28,54,1) 100%);
+    border-bottom-left-radius: 8px;
+}
+
+.buttons {
+    position: absolute;
+    display: flex;
+    padding: 1.25em 2em;
+    top: -3px;
+    left: 50%;
+    transform: translateX(-49%);
+    background: rgb(4,28,54);
+    background: linear-gradient(360deg, rgba(4,61,122,1) 24%, rgba(4,28,54,1) 100%);
+    border: 3px solid white;
+    border-radius: 0 0 8px 8px;
+}
+
+#reset, #stats {
+    padding: 0.75em 1.25em;
+    color: rgb(4,28,54);
+    background: white;
+    border: 3px solid rgb(4,28,54);
+    border-radius: 8px;
+    font-size: 1.25em;
+    font-weight: bold;
+    cursor: pointer;
+    margin: 0 0.25em;
+}
+
+#reset:hover, #stats:hover {
+    background-color: rgb(4,28,54);
+    color: white;
+    box-shadow: 0 0 8px 0px #222;
+    border: 3px solid white;
+
+}
+
+.option:hover {
+    transform: scale(1.01);
+    box-shadow: 0 0 20px 0px #222;
+}
+
+/*** DISPLAY PLAYER AND CPU CHOICE ***/
+
+.choice-img {
+    width: 100px;
+}
+
+.choice-container {
+    position: absolute;
+    display: none;
+}
+
+.player-choice {
+    left: 5%;
+}
+
+.cpu-choice {
+    right: 5%;
+}
+
+.choice-container p {
+    font-weight: bold;
+    text-align: center;
+}
+
+.choice-container.show {
+    display: block;
+}
+
+/*** STATS PAGE ***/
+
+h1 {
+    position: absolute;
+    bottom: 18%;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 3em;
+}
+
+#statsPage {
+    width: 50vw;
+    height: 80vh;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    border: 3px solid #041c36;
+    border-radius: 8px;
+    box-shadow: 0 0 0 100vw rgba(0,0,0,0.9);
+    display: none;
+}
+
+#closeStats {
+    position: absolute;
+    top: 3px;
+    right: 10px;
+    font-size: xx-large;
+    transform: scaleY(0.75);
+    font-weight: bold;
+    cursor: pointer;
+}
+
+#closeStats:hover {
+    color: red;
+}
+
+#statsPage.show {
+    display: block;
+}
+
+#statsPage h2 {
+    text-align: center;
+    font-size: 2.25em;
+    margin-top: 0.5em;
+}
+
+#statsPage p {
+    font-size: 1.75em;
+    margin: 0.5em 0 0 0.5em;
+    font-weight: bold;
+}
+
+#statsPage span {
+    font-weight: 500;
+}

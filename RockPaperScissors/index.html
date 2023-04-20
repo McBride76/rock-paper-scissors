@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/9cf76b20d4.js" crossorigin="anonymous"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <title>Rock Paper Scissors</title>
+</head>
+<body>
+    <div class="buttons">
+        <div id="reset">Reset</div>
+        <div id="stats">Stats</div>
+    </div>
+    <div class="choice-container player-choice">
+        <img src="paper.png"  class="choice-img">
+        <p></p>
+    </div>
+    <div class="choice-container cpu-choice">
+        <img src="rock3.png" class="choice-img">
+        <p></p>
+    </div>
+    <div id="options">
+        <div class="option rock">
+            <img src="rock3.png">
+            <p>Rock</p>
+        </div>
+        <div class="option paper">
+            <img src="paper.png">
+            <p>Paper</p>
+        </div>
+        <div class="option scissors">
+            <img src="scissors2.png">
+            <p>Scissors</p>
+        </div>
+    </div>
+    <h1></h1>
+    </div>
+    <div id="user">You: 
+        <span id="userScore">0</span>
+    </div>
+    <div id="cpu">CPU: <span id="cpuScore">0</span></div>
+    <!--Stats Page-->
+    <div id="statsPage">
+        <div id="closeStats">X</div>
+        <h2>Stats</h2>
+        <p>Wins: <span id="dispWins"></span></p>
+        <p>Losses: <span id="dispLosses"></span></p>
+        <p>Ties: <span id="dispTies"></span></p>
+        <p>Win/Loss Ratio: <span id="dispWinLoss"></span></p>
+        <p>Games Played: <span id="dispTotalGames"></span></p>
+    </div>
+    <script src="handles.js"></script>
+    <script src="main.js"></script>
+</body>
+</html>
